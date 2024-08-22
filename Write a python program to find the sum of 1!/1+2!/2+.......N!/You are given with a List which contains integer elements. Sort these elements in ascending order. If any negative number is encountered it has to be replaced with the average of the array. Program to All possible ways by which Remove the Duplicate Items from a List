@@ -1,0 +1,9 @@
+def process_list(input_list):
+    valid_numbers = [num for num in input_list if num >= 0]
+    average = sum(valid_numbers) / len(valid_numbers) if valid_numbers else 0
+    processed_list = [num if num >= 0 else average for num in input_list]
+    unique_sorted_list = sorted(set(processed_list))
+    return unique_sorted_list
+input_list = [3, -1, 2, 5, -3, 2, 3]
+result = process_list(input_list)
+print(result)  

@@ -1,0 +1,14 @@
+def find_mth_max_nth_min(arr, M, N):
+    sorted_arr = sorted(arr)
+    mth_max = sorted_arr[-M]
+    nth_min = sorted_arr[N-1]
+    total_sum = mth_max + nth_min
+    difference = mth_max - nth_min
+    product = mth_max * nth_min
+    return mth_max, nth_min, total_sum, difference, product
+array = [14, 16, 87, 36, 25, 89, 34]
+M = 1
+N = 3
+mth_max, nth_min, total_sum, difference, product = find_mth_max_nth_min(array, M, N)
+print(f"{M}st Maximum Number = {mth_max} {N}rd Minimum Number = {nth_min} Sum = {total_sum}")
+print(f"Difference = {difference} Product = {product}")
